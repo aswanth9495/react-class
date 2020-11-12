@@ -14,6 +14,17 @@ class App extends Component {
       tasks: newTasks
     });
   }
+  
+  deleteItem = (itemToDelete) => {
+    const newTasks = this.state.tasks.filter(
+      (item) => {
+        return item!== itemToDelete;
+      }
+    );
+    this.setState({
+      tasks: newTasks,
+    })
+  }
 
   render() {
     // console.log(this.state.tasks);
@@ -21,7 +32,10 @@ class App extends Component {
       <div>
         <Header title="Todo App" />
         <AddTodo addItem={this.addItem} />
-        <TodoList todoList={this.state.tasks} />
+        <TodoList 
+          todoList={this.state.tasks}
+          deleteItem={this.deleteItem}
+         />
       </div>
     );
   }
