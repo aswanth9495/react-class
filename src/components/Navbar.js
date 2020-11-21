@@ -12,6 +12,13 @@ function Navbar(props) {
       <li>
         <NavLink to="/about"> About</NavLink>
       </li>
+      <li>
+        <NavLink to="/todo-app"> Todo App</NavLink>
+      </li>
+      <li>
+        <NavLink to="/12"> Posts</NavLink>
+      </li>
+      
      </ul>
     </div>
   );
